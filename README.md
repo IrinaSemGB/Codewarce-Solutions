@@ -1,4 +1,4 @@
-# Решение задач на сервисе Codewarce на языках Java Script и Swift
+# Решение задач на сервисе Codewars на языках Java Script и Swift
 
 
 
