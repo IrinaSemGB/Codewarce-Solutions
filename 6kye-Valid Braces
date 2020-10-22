@@ -1,0 +1,20 @@
+Java Script solution
+
+function validBraces(braces){
+  const stack = [];
+  const open = ['(', '{', '['];
+  const close = [')', '}', ']'];
+  
+  for (let i = 0; i < braces.length; i++) {
+    if (open.includes(braces[i])) {
+      stack.push(braces[i]);
+    } else {
+      if (close.indexOf(braces[i]) === open.indexOf(stack[stack.length - 1])) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    }
+  }
+  return stack.length === 0;
+}
