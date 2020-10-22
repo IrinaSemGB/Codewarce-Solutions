@@ -18,3 +18,37 @@ function validBraces(braces){
   }
   return stack.length === 0;
 }
+
+Swift solution
+
+import Foundation
+
+func validBraces(_ string: String) -> Bool {
+  var arr: [Character] = []
+  for char in string {
+    arr.append(char)
+  }
+    
+  let opening: [Character] = ["(", "{", "["]
+  let closing: [Character] = [")", "}", "]"]
+  var stack: [Character] = []
+    
+    if closing.contains(arr[0]) {
+        return false
+    }
+    
+    
+  for element in arr {
+    if opening.contains(element) {
+      stack.append(element)
+    } else if !stack.isEmpty {
+        if closing.firstIndex(of: element) == opening.firstIndex(of: stack.last!) {
+          stack.removeLast()
+      } else {
+        return false
+      }
+    }
+  }
+  
+  return stack.count == 0
+}
