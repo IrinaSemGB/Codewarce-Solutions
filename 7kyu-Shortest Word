@@ -1,0 +1,6 @@
+JavaScript Solution
+
+function findShort(s){
+  let lengths = s.split(' ').map(el => el.length);
+  return Math.min(...lengths);
+}
