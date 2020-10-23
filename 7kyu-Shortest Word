@@ -1,6 +1,15 @@
-JavaScript Solution
+JavaScript solution
 
 function findShort(s){
   let lengths = s.split(' ').map(el => el.length);
   return Math.min(...lengths);
+}
+
+Swift solution
+
+func find_short(_ str: String) -> Int {
+  let arr = str.split(separator: " ")
+  let lengths = arr.map{ el in el.count }
+  let min = lengths.min()
+  return min ?? -1
 }
