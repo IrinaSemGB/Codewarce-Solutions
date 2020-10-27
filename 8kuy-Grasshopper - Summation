@@ -1,0 +1,19 @@
+JavaScript solution
+
+function summation(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+Swift solution
+
+func summation(_ n: Int) -> Int {
+  var arr: [Int] = []
+  for i in 1...n {
+    arr.append(i)
+  }
+  return arr.reduce(0) { (a, b) in a + b }
+}
