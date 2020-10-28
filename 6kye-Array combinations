@@ -1,0 +1,10 @@
+-- JavaScript solution --
+
+function solve(arr) {
+  let count = 1;
+  for (let elem of arr) {
+    let filtered = elem.filter((el, i) => i === elem.indexOf(el));
+    count *= filtered.length;
+  }
+  return count;
+}
