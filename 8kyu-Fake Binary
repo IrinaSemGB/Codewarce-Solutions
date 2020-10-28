@@ -1,0 +1,15 @@
+-- JavaScript solution --
+
+function fakeBin(x){
+  let y = x.replace(/[0-4]/g, '0');
+  return y.replace(/[5-9]/g, '1');
+}
+
+
+-- Swift solution --
+
+func fakeBin(digits: String) -> String {
+  let zero = digits.replacingOccurrences(of: "[0-4]", with: "0", options: .regularExpression)
+  let result = zero.replacingOccurrences(of: "[5-9]", with: "1", options: .regularExpression)
+  return result
+}
