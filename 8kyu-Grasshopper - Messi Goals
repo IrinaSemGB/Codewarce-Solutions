@@ -1,0 +1,17 @@
+-- JavaScript solution --
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+
+
+-- Swift solution --
+
+var laLigaGoals = 43
+var championLeagueGoals = 10
+var copaDelReyGoals = 5
+
+var totalGoals = laLigaGoals + championLeagueGoals + copaDelReyGoals
