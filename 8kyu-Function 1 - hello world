@@ -1,0 +1,14 @@
+-- JavaScript solution --
+
+function greet() {
+  let str = 'hello world!';
+  return str;
+}
+
+
+-- Swift solution --
+
+func greet() -> String {
+  let greeting = "hello world!"
+  return greeting
+}
