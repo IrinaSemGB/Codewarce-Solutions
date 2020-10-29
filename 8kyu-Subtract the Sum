@@ -1,0 +1,10 @@
+-- JavaScript solution --
+
+const SubtractSum = n => 'apple';
+
+
+-- Swift solution --
+
+func subtractSum(_ n: Int) -> String {
+  return "apple"
+}
