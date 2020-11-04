@@ -1,0 +1,11 @@
+JavaScript solution
+
+function check(a, x) {
+  return a.includes(x);
+}
+
+Swift solution
+
+func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
+    return a.contains(x)
+}
