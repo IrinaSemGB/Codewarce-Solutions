@@ -1,0 +1,25 @@
+JavaScript solution
+
+function expressionMatter(a, b, c) {
+  let one = a * (b + c);
+  let two = a * b * c;
+  let three = a + b * c;
+  let four = (a + b) * c;
+  let five = a + b + c;
+  return Math.max(one, two, three, four, five);
+}
+
+Swift solution
+
+func expressionMatter(_ a: Int, _ b: Int, _ c: Int) -> Int {
+  
+  var arr: [Int] = []
+  arr.append(a + b + c)
+  arr.append(a * b * c)
+  arr.append(a + b * c)
+  arr.append(a * b + c)
+  arr.append((a + b) * c)
+  arr.append(a * (b + c))
+  
+  return arr.max() ?? -1
+}
