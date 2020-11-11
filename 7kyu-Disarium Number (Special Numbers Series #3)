@@ -1,0 +1,22 @@
+JavaScript solution
+
+function disariumNumber(n){
+  let nStr = n + '';
+  let res = 0;
+  for (let i = 0; i < nStr.length; i++) {
+    res += Math.pow(+nStr[i], i + 1);
+  }
+  return res === n ? 'Disarium !!' : 'Not !!';
+}
+
+
+Swift solution
+
+func disariumNumber(_ number: Int) -> String {
+  let digits: [Int] = Array(String(number)).map { (Int(String($0)) ?? 0) }
+  var res: Int = 0
+  for i in (0..<digits.count) {
+    res += Int(pow(Double(digits[i]), Double(i + 1)))
+  }
+  return res == number ? "Disarium !!" : "Not !!"
+}
