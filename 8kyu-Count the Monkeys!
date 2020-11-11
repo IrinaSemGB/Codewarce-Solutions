@@ -1,0 +1,20 @@
+JavaScript solution
+
+function monkeyCount(n) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+
+Swift solution
+
+func monkeyCount(_ n: Int) -> [Int] {
+  var arr: [Int] = []
+  for num in 1...n {
+    arr.append(num)
+  }
+  return arr
+}
