@@ -1,0 +1,25 @@
+JavaScript solution
+
+function bmi(weight, height) {
+  let result = weight / Math.pow(height, 2);
+  if (result <= 18.5) return "Underweight";
+  if (result <= 25.0) return "Normal";
+  if (result <= 30.0) return "Overweight";
+  if (result > 30) return "Obese";
+}
+
+
+Swift solution
+
+func bmi(_ weight: Int, _ height: Double) -> String {
+  let result = Double(weight) / pow(height, 2)
+  if result <= 18.5 {
+    return "Underweight"
+  } else if result <= 25 {
+    return "Normal"
+  } else if result <= 30 {
+    return "Overweight"
+  } else {
+    return "Obese"
+  }
+}
