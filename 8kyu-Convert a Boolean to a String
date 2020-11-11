@@ -1,0 +1,12 @@
+JavaScript solution
+
+function booleanToString(b){
+  return String(b);
+}
+
+
+Swift solution
+
+func booleanToString(_ b: Bool) -> String {
+  return String(b)
+}
