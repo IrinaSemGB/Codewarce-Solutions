@@ -1,0 +1,12 @@
+JavaScript solution
+
+function maps(x){
+  let res = x.map(el => el * 2);
+  return res;
+}
+
+Swift solution
+
+func maps(a : Array<Int>) -> Array<Int> {
+ return a.map{ $0 * 2 }
+}
