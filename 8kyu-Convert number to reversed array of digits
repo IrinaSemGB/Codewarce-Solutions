@@ -1,0 +1,17 @@
+JavaScript solution 
+
+function digitize(n) {
+  return str = (n + '').split('').map(el => +el).reverse();
+}
+
+Swift solution
+
+func digitize(_ num:Int) -> [Int] {
+  var arr: [Int] = [];
+  var n = num
+  repeat {
+    arr.append(n % 10)
+    n /= 10
+  } while (n > 0)
+  return arr
+}
