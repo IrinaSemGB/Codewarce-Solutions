@@ -1,0 +1,18 @@
+JavaScript solution
+
+function stringy(size) {
+  let str = '10';
+  let res = str.repeat(size / 2);
+  return (size % 2 !== 0) ? res += "1" : res;
+}
+
+
+Swift solution
+
+func stringy(_ size: Int) -> String {
+  if size % 2 == 0 {
+    return String(repeating: "10", count: size / 2)
+  } else {
+    return String(repeating: "10", count: size / 2) + "1"
+  }
+}
