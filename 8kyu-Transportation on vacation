@@ -1,0 +1,23 @@
+JavaScript solution
+
+function rentalCarCost(d) {
+  const dayRent = d * 40
+  if (d >= 7) {
+    return dayRent - 50
+  } else if (d >= 3){
+    return dayRent - 20
+  }
+  return dayRent
+}
+
+Swift solution
+
+func RentalCarCost(_ days: Int) -> Int {
+  if (days >= 3 && days < 7) {
+    return days * 40 - 20
+  } else if (days >= 7) {
+    return days * 40 - 50
+  } else {
+    return days * 40
+  }
+}
