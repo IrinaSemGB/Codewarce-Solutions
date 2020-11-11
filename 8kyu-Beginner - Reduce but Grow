@@ -1,0 +1,12 @@
+JavaScript solution
+
+function grow(x){
+  return x.reduce((a, c) => a * c, 1);
+}
+
+
+Swift solution
+
+func grow(_ arr: [Int]) -> Int {
+  return arr.reduce(1, *)
+}
