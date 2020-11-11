@@ -1,0 +1,20 @@
+JavaScript solution
+
+function sumMix(x){
+  return x.map(el => +el).reduce((acc, cur) => acc + cur);
+}
+
+Swift solution
+
+func sumMix(_ arr: [Any]) -> Int {
+  var res: [Int] = []
+  
+  for elem in arr {
+    if let num = elem as? Int {
+      res.append(num)
+    } else if let str = elem as? String {
+      res.append(Int(str) ?? 0)
+    }
+  }
+  return res.reduce(0, +)
+}
