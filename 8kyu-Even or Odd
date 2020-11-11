@@ -1,0 +1,15 @@
+JavaScript solution
+
+function even_or_odd(number) {
+  return (number % 2 === 0) ? 'Even' : 'Odd';
+}
+
+Swift solution
+
+func evenOrOdd(_ number:Int) -> String {
+  if number % 2 == 0 {
+    return "Even"
+  } else {
+    return "Odd"
+  }
+}
