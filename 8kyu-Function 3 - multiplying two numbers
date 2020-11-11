@@ -1,0 +1,13 @@
+JavaScript solution
+
+function multiply(num1, num2) {
+  let result = num1 * num2;
+  return result;
+}
+
+Swift solution
+
+func multiply(_ a: Double, _ b: Double) -> Double {
+    let res = a * b
+    return res
+}
