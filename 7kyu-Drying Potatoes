@@ -1,0 +1,10 @@
+JavaScript solution
+
+const potatoes = (p0, w0, p1) => Math.floor(w0 * (100 - p0) / (100 - p1));
+
+
+Swift solution
+
+func potatoes (_ p0: Int, _ w0: Int, _ p1: Int) -> Int {
+    return Int(w0 * (100 - p0) / (100 - p1))
+}
