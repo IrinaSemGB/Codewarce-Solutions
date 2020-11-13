@@ -1,0 +1,27 @@
+JavaScript solution
+
+function specialNumber(n){
+  let spetial = ['0', '1', '2', '3', '4', '5'];
+  const numbers = n.toString().split('');
+  
+  for (let elem of numbers) {
+    if (spetial.includes(elem)) {
+      continue;
+    } else return 'NOT!!'; break;
+  }
+  return 'Special!!';
+}
+
+
+Swift solution
+
+func specialNumber(_ number: Int) -> String {
+  let special = ["0", "1", "2", "3", "4", "5"]
+  let arr = Array(String(number))
+  
+  for elem in arr {
+    if !special.contains(String(elem)) { return "NOT!!" }
+  }
+  
+  return "Special!!"
+}
