@@ -1,0 +1,27 @@
+Java Script
+
+function disemvowel(str) {
+  
+  let newStr = '';
+    
+  for (let i = 0; i < str.length; i++) {
+    
+    if (str[i] !== 'a' && str[i] !== 'A' && str[i] !== 'e' && str[i] !== 'E' && str[i] !== 'i' && str[i] !== 'I' && str[i] !== 'o' && str[i] !== 'O' && str[i] !== 'u' && str[i] !== 'U') {
+      newStr += str[i];
+    }
+  }
+  
+  return newStr;
+}
+
+
+Swift
+
+func disemvowel(_ s: String) -> String {
+  let vowels = ["a", "o", "u", "e", "i", "A", "O", "U", "E", "I"]
+  var res: String = ""
+  for elem in s {
+    if !vowels.contains(String(elem)) { res += String(elem) }
+  }
+  return res
+}
