@@ -1,0 +1,14 @@
+JavaScript
+
+function descendingOrder(n){
+  let num = n + '';
+  return +num.split('').sort((a, b) => b - a).join('');
+}
+
+Swift
+
+func descendingOrder(of number: Int) -> Int {
+  let arr = Array(String(number)).compactMap { Int("\($0)") }
+  let sort = arr.sorted(by: >).compactMap { String("\($0)") }.joined()
+  return Int(sort) ?? -1
+}
