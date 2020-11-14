@@ -1,0 +1,15 @@
+JavaScript
+
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a, b) => a - b);
+  let sum = numbers[0] + numbers[1];
+  return sum;
+}
+
+Swift
+
+func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
+  var arr = array.sorted(by: <)
+  var sum = arr[0] + arr[1]
+  return sum
+}
