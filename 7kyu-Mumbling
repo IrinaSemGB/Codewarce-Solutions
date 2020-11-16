@@ -1,0 +1,32 @@
+JavaScript
+
+function accum(s) {
+  let res = '';
+  for (let i = 0; i < s.length; i++) {
+    res += s[i].toUpperCase();
+    
+    for (let j = 1; j <= i; j++) {
+      res += s[i].toLowerCase();
+    }
+    
+    if (i < s.length - 1) res += '-';
+  }
+  
+  return res;
+}
+
+
+Swift
+
+func accum(_ s: String) -> String {
+  var res: String = ""
+  
+  for (index, element) in s.enumerated() {
+    res += String(element).uppercased()
+    if index > 0 {
+      for _ in 1...index { res += String(element).lowercased() }
+    }
+    if index < s.count - 1 { res += "-" }
+  }
+  return res
+}
