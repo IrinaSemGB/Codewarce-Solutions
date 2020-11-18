@@ -1,0 +1,28 @@
+JavaScript
+
+function nbDig(n, d) {
+  let dStr = String(d);
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    let kStr = String(Math.pow(i, 2));
+    for (let elem of kStr) {
+      if (elem === dStr) { count++ }
+    }
+  }
+  return count;
+}
+
+Swift
+
+func nbDig(_ n: Int, _ d: Int) -> Int {
+  let dStr = String(d)
+  var counter: Int = 0
+  
+  for i in 0...n {
+    let kStr = String(i * i)
+    for elem in kStr {
+      if String(elem) == dStr { counter += 1 }
+    }
+  }
+  return counter
+}
