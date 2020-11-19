@@ -1,0 +1,21 @@
+JavaScript
+
+function printerError(s) {
+  const out = 'nopqrstuvwxyz';
+  let errors = 0;
+  for (let elem of s) {
+    if (out.includes(elem)) { errors++ };
+  }
+  return `${errors}/${s.length}`;
+}
+
+Swift
+
+func printerError(_ s: String) -> String {
+  let out = "nopqrstuvwxyz"
+  var errors = 0
+  for elem in s {
+    if out.contains(elem) { errors += 1 }
+  }
+  return String(errors) + "/" + String(s.count)
+}
