@@ -1,0 +1,15 @@
+JavaScript Solution
+
+const maxMultiple = (divisor, bound) => {
+  for (let i = bound; i > 0; i--) {
+    if (i % divisor === 0) {
+      return i;
+    }
+  }
+}
+
+Swift solution
+
+func maxMultiple(_ d: Int, _ b: Int) -> Int {
+    return b - b % d
+}
