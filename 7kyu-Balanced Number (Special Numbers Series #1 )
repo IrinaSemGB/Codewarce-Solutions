@@ -1,0 +1,43 @@
+JavaScript solution
+
+function balancedNum(num) {
+  const n = String(num).split('').map(el => +el);
+  if (n.length < 3 || n.length === 3 && n[0] === n[2]) {
+    return 'Balanced';
+  }
+  
+  let index = 0;
+  if (n.length % 2 === 0) {
+      index = n.length / 2 - 1;
+      
+  } else if (n.length % 2 !== 0) {
+      index = Math.floor(n.length / 2);
+  }
+  
+  const left = n.slice(0, index).reduce((acc, cur) => cur + acc);
+  const right = n.reverse().slice(0, index).reduce((acc, cur) => cur + acc);
+  return left === right ? 'Balanced' : 'Not Balanced';
+}
+
+
+Swift
+
+func balancedNumber(_ number: Int) -> String {
+  let num: [Int] = Array(String(number)).compactMap{ Int("\($0)") }
+  
+  if num.count < 3 || num.count == 3 && num[0] == num[2] {
+    return "Balanced"
+  }
+  
+  var index: Int = 0;
+  if num.count % 2 == 0 {
+    index = num.count / 2 - 1
+  } else {
+    index = num.count / 2
+  }
+  
+  let left = num[0..<index].reduce(0, +)
+  let right = num.reversed()[0..<index].reduce(0, +)
+  
+  return left == right ? "Balanced" : "Not Balanced"
+}
