@@ -1,0 +1,43 @@
+Java Script solution
+
+function permutations(str) {
+  if (str.length <= 1) return [str];
+  
+  let current = str;
+  let res = [];
+  let count = str.length;
+  
+  do {
+    
+    for (let i = 0; i < current.length; i++) {
+      let j = i + 1;
+      if (i !== current.length - 1) {
+        let newStr = current.slice(0, i) + current[j] + current[i] + current.slice(j + 1, current.length + 1);
+        res.push(newStr);
+        current = newStr;
+      
+        for (let ii = 0; ii < newStr.length; ii++) {
+          let jj = ii + 1;
+          if (ii !== newStr.length - 1) {
+            let newStr2 = newStr.slice(0, ii) + newStr[jj] + newStr[ii] + newStr.slice(jj + 1, newStr.length + 1);
+            res.push(newStr2);
+          } else if (ii === newStr.length - 1) {
+            let newStr2 = newStr[ii] + newStr.slice(0, ii);
+            res.push(newStr2);
+          }
+        }
+      
+      } else {
+        let newStr = current[i] + current.slice(0, i);
+        res.push(newStr);
+        current = newStr;
+        continue;
+      }
+    }
+    
+    current = current.slice(1, current.length) + current[0];
+    count--;
+  } while (count > 0);
+  res = res.filter((el, index) => index === res.indexOf(el)).sort();
+  return res;
+}
