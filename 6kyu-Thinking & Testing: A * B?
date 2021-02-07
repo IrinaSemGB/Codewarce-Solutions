@@ -1,0 +1,7 @@
+JS
+
+function testIt(a, b) {
+  const aSum = String(a).split('').reduce((acc, cur) => +acc + +cur);
+  const bSum = String(b).split('').reduce((acc, cur) => +acc + +cur);
+  return aSum * bSum;
+}
