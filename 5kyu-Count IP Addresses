@@ -1,0 +1,13 @@
+JS
+
+function ipsBetween(start, end){
+  const startArr = start.split('.').map(el => +el);
+  const endArr = end.split('.').map(el => +el);
+  let resArr = [];
+  
+  for (let i = 0; i < 4; i++) {
+    resArr.push(endArr[i] - startArr[i]);
+  }
+  
+  return 16777216 * resArr[0] + 65536 * resArr[1] + 256 * resArr[2] + resArr[3];
+}
