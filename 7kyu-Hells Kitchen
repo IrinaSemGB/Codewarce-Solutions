@@ -1,0 +1,3 @@
+JS
+
+const gordon = (a) => a.split(' ').map(el => (el + '!!!!').toUpperCase()).join(' ').replace(/[A]/g, '@').replace(/[OUIE]/g, '*');
