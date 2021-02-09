@@ -1,0 +1,6 @@
+JS
+
+function bears(x, s) {
+  const res = s.match(/(B8)|(8B)/g) || [];
+  return [res.join(''), res.length >= x];
+}
