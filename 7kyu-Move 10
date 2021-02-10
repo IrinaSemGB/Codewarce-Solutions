@@ -1,0 +1,6 @@
+JS
+
+function moveTen(s) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
+  return s.split('').map((el, i) => alphabet[alphabet.indexOf(s[i]) + 10]).join('');
+}
