@@ -1,0 +1,17 @@
+JS
+
+function calculateWinners(snapshot, penguins) {
+  const shot = snapshot.split('\n');
+  let resShot = [];
+  
+  for (let elem of shot) {
+    let pIndexShot = 0;
+    if (elem.includes('P')) {
+      pIndexShot = elem.slice(elem.indexOf('P') + 1, - 1);
+    } else { pIndexShot = elem.slice(elem.indexOf('p') + 1, - 1); }
+    resShot.push(pIndexShot.split('').map(el => el === '-' ? 1 : 2).reduce((acc, cur) => acc + cur));
+  }
+  
+  let arr = resShot.map(el => el).sort((a, b) => a - b);
+  return `GOLD: ${penguins[resShot.indexOf(arr[0])]}, SILVER: ${penguins[resShot.indexOf(arr[1])]}, BRONZE: ${penguins[resShot.indexOf(arr[2])]}`
+}
