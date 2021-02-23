@@ -1,0 +1,11 @@
+JS
+
+function nextId(ids) {
+  const setID = new Set(ids);
+  
+  for (let i = 0; i <= ids.length; i++) {
+    if (!setID.has(i)) return i;
+  }
+  
+  return 0;
+}
