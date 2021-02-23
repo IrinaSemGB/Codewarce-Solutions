@@ -1,0 +1,9 @@
+JS
+
+function getNames(data){
+  let arr = [];
+  for (let elem of data) {
+    arr.push(elem.name);
+  }
+  return arr;
+}
