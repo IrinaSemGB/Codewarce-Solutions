@@ -1,0 +1,16 @@
+JS
+
+function logicalCalc(array, op){
+  switch (op) {
+    case 'AND':
+      if (array.every( (el) => el === true) || array.every((elem) => elem === false) ) {
+        return array[0];
+      } else { return false}
+      
+    case 'OR':
+      return array.reduce( (a, b) => {return a === b ? a : true} );
+      
+    case 'XOR':
+      return array.reduce( (a, b) => a !== b );
+  }
+}
