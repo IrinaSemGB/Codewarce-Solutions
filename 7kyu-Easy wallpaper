@@ -1,0 +1,17 @@
+JS
+
+function wallpaper(l, w, h) {
+  const numbers = ['zero', 'one', 'two', 'three', 'four', 'five',
+                    'six', 'seven', 'eight', 'nine', 'ten', 'eleven',
+                    'twelve', 'thirteen', 'fourteen', 'fifteen',
+                    'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+  return (l * w * h) === 0 ? numbers[0] : numbers[Math.ceil((l * h * 2 + w * h * 2) * 1.15 / 5.2)];
+}
+
+Swift
+
+func wallpaper(_ l: Double, _ w: Double, _ h: Double) -> String {
+  let numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+  let sqrt = Int(((l * h * 2 + w * h * 2) * 1.15 / 5.2).rounded(.up))
+  return (l * w * h) == 0 ? numbers[0] : numbers[sqrt]
+}
