@@ -1,0 +1,31 @@
+JS
+
+function pyramid(balls) {
+  let rest = balls;
+  let res = 0;
+  for (let i = 1; i <= balls; i++) {
+    if (rest - i >= 0) {
+      rest -= i;
+      res++;
+    } else {
+      break;
+    }
+  }
+  return res;
+}
+
+Swift
+
+func pyramid(_ balls: Int) -> Int{
+  var b = balls;
+  var count = 0;
+  for i in (1...balls) {
+    if (b - i >= 0) {
+      b -= i;
+      count += 1;
+    } else {
+      break;
+    }
+  }
+  return count;
+}
