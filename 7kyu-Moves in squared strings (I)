@@ -1,0 +1,15 @@
+JS
+
+function vertMirror(strng) {
+  let arr = strng.split('\n').map(el => el.split('').reverse().join(''));
+  return arr.join('\n');
+}
+
+function horMirror(strng) {
+  return strng.split('\n').reverse().join('\n');
+}
+
+function oper(fct, s) {
+  return fct(s);
+}
+
