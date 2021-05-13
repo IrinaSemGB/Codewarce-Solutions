@@ -1,0 +1,9 @@
+JS
+
+const overTheRoad = (address, n) => n * 2 - address + 1;
+
+Swift
+
+func overTheRoad(address: Int, street: Int) -> Int {
+  return street * 2 + 1 - address
+}
