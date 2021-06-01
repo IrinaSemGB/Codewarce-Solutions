@@ -1,0 +1,13 @@
+JS
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let dad = dadYearsOld;
+  let count = 0;
+  
+  if (sonYearsOld * 2 < dadYearsOld) {
+    while (dad > sonYearsOld * 2) { count++; dad--; }
+  } else { 
+    while (dad < sonYearsOld * 2) { count++; dad++; }
+  }
+  return count;
+}
