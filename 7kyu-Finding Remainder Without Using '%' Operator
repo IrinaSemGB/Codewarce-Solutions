@@ -1,0 +1,9 @@
+JS
+
+const remainder = (D, d) => {
+  let num = D;
+  while (num >= d && num >= 0) {
+    num -= d;
+  }
+  return num;
+};
