@@ -1,0 +1,24 @@
+JS
+
+function multiTable(number) {
+  let res = '';
+  for (let i = 1; i <= 10; i++) {
+    res += `${i} * ${number} = ${i * number}`;
+    if (i < 10) res += '\n';
+  }
+  return res;
+}
+
+Swift
+
+func multi_table(_ number: Int) -> String {
+  var result = ""
+  
+  for element in (1...10) {
+    result += "\(element) * \(number) = \(element * number)"
+    if (element != 10) {
+      result += "\n"
+    }
+  }
+  return result
+}
