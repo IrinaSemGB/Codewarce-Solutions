@@ -1,0 +1,12 @@
+JavaScript
+
+function pillars(num_pill, dist, width) {
+  if (num_pill <= 1) return 0;
+  
+  let distance = dist * 100;
+  let fullDistance = 0;
+  for (let i = num_pill; i > 0; i--) {
+    fullDistance += width + distance;
+  }
+  return fullDistance - width * 2 - distance;
+}
