@@ -1,0 +1,20 @@
+JavaScript
+
+function battle(x, y) {
+  const abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  
+  function power(char) {
+    var res = 0;
+    let arr = char.split('');
+    for (let i = 0; i <= arr.length; i++) {
+      if (abc.includes(arr[i])) {
+        res += abc.indexOf(arr[i]) + 1;
+      }
+    }
+    return res;
+  }
+  
+
+  if (power(x) === power(y)) return 'Tie!';
+  return power(x) > power(y) ? x : y;
+}
